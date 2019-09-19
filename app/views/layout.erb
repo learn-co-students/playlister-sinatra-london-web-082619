@@ -1,10 +1,26 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <style>
+      body  {background-color: powderblue}
+      h1    {font-family: verdana}
+      p     {color: red; font-family: verdana}
+      nav   {font-family: verdana}
+      a     {font-family: verdana}
+      table, th, td { border: 1px solid black; font-family: verdana; text-align: center}
+    </style>
     <title></title>
   </head>
 
   <body>
+   <img src="https://assets.website-files.com/5c2fdc94d80dc219f7fb9172/5c368640f154289a876505c8_Playlister-Logo-Black.png" style="width:80%;" alt="boombox">
+  <img src="https://cdn.shopify.com/s/files/1/0015/6771/9539/products/tv3_4_1500x.jpg?v=1554796205" style="width:40%;" alt="boombox">
+  <nav>
+    <a class="button" href="/">Home</a> &nbsp | &nbsp
+    <a class="button" href="/artists">All Artists</a> &nbsp | &nbsp
+    <a class="button" href="/genres">All Genres</a> &nbsp | &nbsp
+    <a class="button" href="/songs">All Songs</a>
+  </nav>
     <%= yield %>
   </body>
 </html>
