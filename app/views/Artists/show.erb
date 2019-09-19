@@ -1,0 +1,21 @@
+<h1><%= @artist.name %></h1>
+
+<table style="width:50%">
+  <tr>
+    <th>Songs</th>
+    <th>Genres</th>
+  </tr>
+  <% @songs.each do |song|  %>
+  <tr>
+    <td><a href="/songs/<%=song.slug%>" ><%= song.name %></td></a>
+    <% genre_names = @genres.map(&:name) %>
+    <td><% genre_names.each do |genre_name| %>
+    <% genre = Genre.find_by(name: genre_name) %>
+    <a href="/genres/<%= genre.slug %>"><%= genre_name %></a>,&nbsp
+    <% end %>
+    </td></a>
+  </tr>
+  
+  <% end %>
+  
+</table>
